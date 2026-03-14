@@ -1,45 +1,70 @@
-import { motion } from 'motion/react';
-import { Target, MessageCircle, Lightbulb, Users, Mic } from 'lucide-react';
+import { motion } from "motion/react";
+import { Target, MessageCircle, Lightbulb, Users, Mic } from "lucide-react";
 
 const scoringDimensions = [
   {
     icon: Target,
-    name: 'Technical Accuracy',
-    weight: '30%',
-    description: 'Evaluates correctness and depth of technical knowledge',
+    name: "Technical Accuracy",
+    weight: "30%",
+    description: "Evaluates correctness and depth of technical knowledge",
   },
   {
     icon: MessageCircle,
-    name: 'Communication',
-    weight: '20%',
-    description: 'Clarity, coherence, and professional expression',
+    name: "Communication",
+    weight: "20%",
+    description: "Clarity, coherence, and professional expression",
   },
   {
     icon: Lightbulb,
-    name: 'Problem Solving',
-    weight: '20%',
-    description: 'Logical thinking, creativity, and structured approach',
+    name: "Problem Solving",
+    weight: "20%",
+    description: "Logical thinking, creativity, and structured approach",
   },
   {
     icon: Users,
-    name: 'Behavioral (STAR)',
-    weight: '15%',
-    description: 'Real examples using Situation, Task, Action, Result',
+    name: "Behavioral (STAR)",
+    weight: "15%",
+    description: "Real examples using Situation, Task, Action, Result",
   },
   {
     icon: Mic,
-    name: 'Confidence & Delivery',
-    weight: '15%',
-    description: 'Response quality, pace, and minimal filler words',
+    name: "Confidence & Delivery",
+    weight: "15%",
+    description: "Response quality, pace, and minimal filler words",
   },
 ];
 
 const scoreBands = [
-  { range: '91-100', label: 'Exceptional', color: 'bg-gray-900', text: 'Fast-track to offer' },
-  { range: '76-90', label: 'Strong', color: 'bg-gray-700', text: 'Proceed to next round' },
-  { range: '61-75', label: 'Good', color: 'bg-gray-500', text: 'Keep practicing' },
-  { range: '41-60', label: 'Needs Work', color: 'bg-gray-400', text: 'More practice needed' },
-  { range: '0-40', label: 'Not Ready', color: 'bg-gray-300', text: 'Significant gaps' },
+  {
+    range: "91-100",
+    label: "Exceptional",
+    color: "bg-gray-900",
+    text: "Fast-track to offer",
+  },
+  {
+    range: "76-90",
+    label: "Strong",
+    color: "bg-gray-700",
+    text: "Proceed to next round",
+  },
+  {
+    range: "61-75",
+    label: "Good",
+    color: "bg-gray-500",
+    text: "Keep practicing",
+  },
+  {
+    range: "41-60",
+    label: "Needs Work",
+    color: "bg-gray-400",
+    text: "More practice needed",
+  },
+  {
+    range: "0-40",
+    label: "Not Ready",
+    color: "bg-gray-300",
+    text: "Significant gaps",
+  },
 ];
 
 export function ScoringSystem() {
@@ -57,10 +82,11 @@ export function ScoringSystem() {
             Multi-Dimensional Scoring
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Our AI evaluates candidates across 5 critical dimensions for comprehensive assessment
+            Our AI evaluates candidates across 5 critical dimensions for
+            comprehensive assessment
           </p>
         </motion.div>
-        
+
         {/* Scoring Dimensions */}
         <div className="mb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -91,7 +117,7 @@ export function ScoringSystem() {
             ))}
           </div>
         </div>
-        
+
         {/* Score Bands */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -99,7 +125,9 @@ export function ScoringSystem() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-3xl mb-8 text-center text-black">Score Interpretation</h3>
+          <h3 className="text-3xl mb-8 text-center text-black">
+            Score Interpretation
+          </h3>
           <div className="grid md:grid-cols-5 gap-4">
             {scoreBands.map((band, index) => (
               <motion.div
