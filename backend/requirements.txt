@@ -1,0 +1,24 @@
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+sqlalchemy
+alembic
+psycopg2-binary
+python-jose[cryptography]
+passlib[bcrypt]
+bcrypt==3.2.0
+pymupdf
+python-multipart
+google-generativeai
+groq
+# spacy # Uncomment if needed later, usually needs separate model download
+# sentence-transformers # Heavy dependency, maybe later
+# openai-whisper # Heavy dependency, maybe later
+requests
+python-dotenv
+asyncpg
+httpx
+aiosqlite
+email-validator
+greenlet
