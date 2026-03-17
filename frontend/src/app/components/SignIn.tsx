@@ -61,7 +61,7 @@ export function SignIn() {
     <div className="h-screen bg-gray-100 flex items-center justify-center p-4 md:p-6 font-sans overflow-hidden">
       <div className="max-w-6xl w-full bg-white rounded-[2rem] shadow-2xl overflow-hidden flex flex-col md:flex-row h-full max-h-[720px]">
         {/* Left Side - Sign In Form */}
-        <div className="w-full md:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-white overflow-y-auto">
+        <div className="w-full md:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-white overflow-hidden">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -77,7 +77,9 @@ export function SignIn() {
               </span>
             </div>
 
-            <h1 className="text-3xl font-bold mb-1">Welcome back</h1>
+            <h1 className="text-3xl font-bold mb-1 text-gray-900">
+              Welcome back
+            </h1>
             <p className="text-gray-500 text-sm">Please enter your details</p>
           </motion.div>
 

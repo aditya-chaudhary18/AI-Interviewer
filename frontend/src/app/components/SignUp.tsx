@@ -131,7 +131,7 @@ export function SignUp() {
                   placeholder="••••••••"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="pl-12 h-11 bg-gray-50 border-none rounded-xl focus-visible:ring-black"
+                  className="pl-12 h-11 bg-gray-50 border-none rounded-xl focus-visible:ring-black text-gray-700"
                   required
                 />
               </div>
