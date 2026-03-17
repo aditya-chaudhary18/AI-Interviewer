@@ -41,15 +41,7 @@ export default function App() {
   }
 
   if (isHRDashboardPage) {
-<<<<<<< Updated upstream
-    if (!isAuthenticated()) {
-      window.location.href = "/signin";
-      return null;
-    }
-    return <Dashboard role="hr" userName="HR" />;
-=======
     return <HRDashboard />;
->>>>>>> Stashed changes
   }
 
   return (
